@@ -27,17 +27,28 @@ Super resolution GANs aims to increase the resolution of images.  SR GANs applie
 
 This machine learning project was run locally on a NVIDIA GeForce RTX 2060 graphics card.  In order to run on a local machine using a graphics card, there are some necessary drivers to install for tensorflow.  First, the [NVIDIA GPU Drivers](https://www.nvidia.com/download/index.aspx?lang=en-us) are needed.  Then the [NVIDIA CUDA Toolkit](https://developer.nvidia.com/cuda-toolkit-archive) is needed.  This project was run on CUDA v10.0 to work with the Tensorflow v2.0.0b1.  Lastly, the [NVIDIA cuDNN](https://developer.nvidia.com/rdp/cudnn-archive) version that matches the machine's CUDA version is needed.  Once all of these packages are installed, the user can run the program.
 
+The dataset was pulled from the [DIV2K - bicubic downscaling x4 competition](https://data.vision.ee.ethz.ch/cvl/ntire17//).
+
 To start training, the user needs to run the train script:
 ```bash
 python train.py
 ```
 
+The dataset was trimmed down to lessen the total runtime.  There were 48 total training images and 24 total validation images.
 The initial generator was run for 50 epochs with 6 steps and each step took around 14.5 seconds.
 In the second pass that included the discriminator, the model was run for 100 epochs with 12 steps and each step took around 65 seconds.
 
 ### Results
 
-After training on the [DIV2K - bicubic downscaling x4 competition](https://data.vision.ee.ethz.ch/cvl/ntire17//) images, we were able to produce some higher quality results.
+After training on the [DIV2K - bicubic downscaling x4 competition](https://data.vision.ee.ethz.ch/cvl/ntire17//) images, we were able to produce some higher-resultion image results.
+
+First, we can view the generator as it initially trains without the discriminator network.  
+
+[Generator 1](results/generator1.PNG)
+[Generator 2](results/generator2.PNG)
+[Generator 3](results/generator3.PNG)
+
+We can see that the first ten epochs generated an incredibly blurry and almost unrecognizable images.  As more epochs run, the images start to become less unrecognizable, but the output is still low-resolution and is very blurry.
 
 ### Conclusion
 
