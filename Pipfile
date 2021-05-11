@@ -1,0 +1,17 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+easydict = "~=1.9"
+tensorlayer = "~=2.0.0"
+numpy = "~=1.16.1"
+tensorflow-gpu = "~=2.0.0b1"
+tensorflow = "~=2.0.0b1"
+h5py = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.7"
