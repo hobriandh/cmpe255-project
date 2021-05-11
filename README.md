@@ -70,8 +70,8 @@ Our results showed the key parts of how the model works.  The SR GANs model woul
 
 These examples show what the model can output given more steps and epochs.  This model ran 100 epochs with 100 steps for the initial generator and 2000 epochs with 50 steps with the discriminator model included.  This is also not using the truncated dataset, but instead 800 images for training and 100 images for validation.
 
-![SRGAN_Result](results/SRGAN_Result)
-![SRGAN_Result](results/SRGAN_Result2)
+![SRGAN_Result](results/SRGAN_Result.png)
+![SRGAN_Result](results/SRGAN_Result.png)
 
 In the future, we plan on running the full dataset with the necessary amounts of epochs and steps.  However, since the time for training goes up exponentially with those increased metrics, it just was not feasable for running on our local machine even when it was running on an NVDIA GPU.  From this project the key points we learned was how a GANs model worked and how to incorperate an NVIDA graphics card into our training to expedite the training time.
 
